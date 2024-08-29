@@ -17,6 +17,11 @@ function createBoard(len) {
             sq.style.height = dimension + "px";
             sq.style.border = "1px solid black";
             row.appendChild(sq);
+
+            sq.addEventListener("mouseenter", function() {
+                sq.style.backgroundColor = "rgb(" + parseInt(Math.random() * 255) + "," 
+                + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
+            })
         }
         container.appendChild(row);
     }
